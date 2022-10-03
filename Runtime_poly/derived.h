@@ -13,6 +13,7 @@
 
 using namespace std;
 
+// derived class is inherited from base class
 class derived : public base {
 public:
 	derived();

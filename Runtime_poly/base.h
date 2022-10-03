@@ -16,7 +16,7 @@ class base {
 public:
 	base();
 	void base_function();
-	virtual void derived_function(int) = 0;
+	virtual void derived_function(int) = 0; // pure virtual function
 	virtual ~base();
 };
 
