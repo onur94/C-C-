@@ -1,3 +1,3 @@
-# C-programming
+# C/C++ Programming
 
-  C - C++ examples
+  This repo contains example codes of C/C++
