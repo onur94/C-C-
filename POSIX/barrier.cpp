@@ -5,34 +5,36 @@
 using namespace std;
   
 pthread_t pthread1, pthread2;
-pthread_mutex_t lock;
+pthread_barrier_t   barrier;
   
 void *thread_function(void *arg)
 {
     char id = *(char *)arg;
-
-    pthread_mutex_lock(&lock);
+ 
     cout << "Task-" << id << " has started" << endl;
-    sleep(2);
-    cout << "Task-" << id << " has finished" << endl;
-    pthread_mutex_unlock(&lock);
+    if (id == '1')
+        sleep(2);
+    else
+        sleep(4);
+
+    cout << "Task-" << id << " waiting at barrier" << endl;
+    pthread_barrier_wait(&barrier); // At this point, the two tasks will await each other.
+    sleep(1);
     
+    cout << "Task-" << id << " has finished" << endl;
+
     return NULL;
 }
   
 int main(void)
 {
-    if (pthread_mutex_init(&lock, NULL) != 0) {
-        cout << "Mutex init has failed" << endl;
-        return 1;
-    }
-  
+    pthread_barrier_init (&barrier, NULL, 2);
+
     pthread_create(&pthread1, NULL, thread_function, (void *)"1");
     pthread_create(&pthread2, NULL, thread_function, (void *)"2");
 
     pthread_join(pthread1, NULL);
     pthread_join(pthread2, NULL);
-    pthread_mutex_destroy(&lock);
   
     return 0;
 }
