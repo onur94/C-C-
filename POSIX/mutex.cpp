@@ -11,15 +11,10 @@ void *thread_function(void *arg)
 {
     char id = *(char *)arg;
     pthread_mutex_lock(&lock);
-  
     printf("Job %c has started\n", id);
-  
     sleep(2);
-  
     printf("Job %c has finished\n", id);
-  
     pthread_mutex_unlock(&lock);
-  
     return NULL;
 }
   
