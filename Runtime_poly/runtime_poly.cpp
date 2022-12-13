@@ -11,8 +11,9 @@
 
 using namespace std;
 
-int main() {
-	derived cls;
-	cls.base_function();
+int main() 
+{
+	base *cls = new derived();
+	cls->function();
 	return 0;
 }

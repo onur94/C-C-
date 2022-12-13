@@ -15,10 +15,10 @@ using namespace std;
 
 // derived class is inherited from base class
 class derived : public base {
+	
 public:
 	derived();
-	void derived_function(int);
-	virtual ~derived();
+	void function(int) override;
 };
 
 #endif /* DERIVED_H_ */

@@ -8,15 +8,9 @@
 #include "base.h"
 
 base::base() {
-	// TODO Auto-generated constructor stub
 }
 
-base::~base() {
-	// TODO Auto-generated destructor stub
-}
-
-void base::base_function()
+void base::function()
 {
 	cout << "Base class function called" << endl;
-	this->derived_function(5);
 }

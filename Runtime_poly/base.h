@@ -13,11 +13,11 @@
 using namespace std;
 
 class base {
+	
 public:
 	base();
-	void base_function();
-	virtual void derived_function(int) = 0; // pure virtual function
-	virtual ~base();
+	void function();
+	virtual void function(int);
 };
 
 #endif /* BASE_H_ */
