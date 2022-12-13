@@ -11,12 +11,9 @@
 using namespace std;
 
 class_a::class_a() {
-	// TODO Auto-generated constructor stub
-
 }
 
 class_a::~class_a() {
-	// TODO Auto-generated destructor stub
 }
 
 void class_a::print_x()

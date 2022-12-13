@@ -8,12 +8,9 @@
 #include "classa.h"
 
 class_a::class_a() {
-	// TODO Auto-generated constructor stub
-
 }
 
 class_a::~class_a() {
-	// TODO Auto-generated destructor stub
 }
 
 void class_a::setX(int _x)

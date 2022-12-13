@@ -8,12 +8,10 @@
 #include "operation.h"
 
 operation::operation() {
-	// TODO Auto-generated constructor stub
 	initializeHandlers();
 }
 
 operation::~operation() {
-	// TODO Auto-generated destructor stub
 }
 
 void operation::initializeHandlers()

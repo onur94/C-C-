@@ -8,12 +8,9 @@
 #include "mathematics.h"
 
 mathematics::mathematics() {
-	// TODO Auto-generated constructor stub
-
 }
 
 mathematics::~mathematics() {
-	// TODO Auto-generated destructor stub
 }
 
 void mathematics::add(int a, int b)
